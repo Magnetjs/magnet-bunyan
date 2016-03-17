@@ -1,5 +1,5 @@
 {
-  "name": "@kievechua/magnet-bunyan",
+  "name": "magnet-bunyan",
   "version": "0.1.0",
   "description": "Magnet adapter for Bunyan",
   "main": "dist/index.js",
