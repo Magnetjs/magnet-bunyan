@@ -1,0 +1,14 @@
+import Base from 'magnet-core/dist/base';
+import bunyan from 'bunyan';
+import defaultConfig from './config/bunyan';
+
+export default class Bunyan extends Base {
+  async setup() {
+    let bunyanConfig = {};
+    if (this.config && typeof this.config.bunyan === 'undefined') {
+      bunyanConfig = this.config.bunyan;
+    }
+    const config = Object.assign(defaultConfig, bunyanConfig);
+    this.app.log = bunyan.createLogger(config.bunyan || config.app);
+  }
+};
