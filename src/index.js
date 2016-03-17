@@ -5,10 +5,11 @@ import defaultConfig from './config/bunyan';
 export default class Bunyan extends Base {
   async setup() {
     let bunyanConfig = {};
-    if (this.config && typeof this.config.bunyan === 'undefined') {
+    if (this.config && this.config.bunyan) {
       bunyanConfig = this.config.bunyan;
     }
-    const config = Object.assign(defaultConfig, bunyanConfig);
-    this.app.log = bunyan.createLogger(config.bunyan || config.app);
+    console.log(bunyanConfig);
+    const config = Object.assign(defaultConfig.bunyan, bunyanConfig);
+    this.app.log = bunyan.createLogger(config);
   }
 };

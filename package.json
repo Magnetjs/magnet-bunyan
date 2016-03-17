@@ -1,6 +1,6 @@
 {
   "name": "magnet-bunyan",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Magnet adapter for Bunyan",
   "main": "dist/index.js",
   "scripts": {

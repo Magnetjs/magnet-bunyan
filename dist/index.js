@@ -48,12 +48,12 @@ var Bunyan = function (_Base) {
               case 0:
                 bunyanConfig = {};
 
-                if (this.config && typeof this.config.bunyan === 'undefined') {
+                if (this.config && this.config.bunyan) {
                   bunyanConfig = this.config.bunyan;
                 }
-                config = Object.assign(_bunyan4.default, bunyanConfig);
+                config = Object.assign(_bunyan4.default.bunyan, bunyanConfig);
 
-                this.app.log = _bunyan2.default.createLogger(config.bunyan || config.app);
+                this.app.log = _bunyan2.default.createLogger(config);
 
               case 4:
               case 'end':
@@ -76,3 +76,4 @@ var Bunyan = function (_Base) {
 
 exports.default = Bunyan;
 ;
+//# sourceMappingURL=index.js.map

@@ -8,3 +8,4 @@ exports.default = {
     name: 'magnet-app'
   }
 };
+//# sourceMappingURL=bunyan.js.map
