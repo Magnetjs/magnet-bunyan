@@ -10,3 +10,32 @@ magnet([
   Logger,
 ]);
 ```
+With Adapter
+```
+import magnet from 'magnet-core';
+import Logger from 'magnet-bunyan';
+
+magnet([
+  Logger,
+]);
+```
+server/config/bunyan.js
+```
+import Bunyan2Loggly from 'bunyan-loggly';
+
+export default {
+  bunyan: {
+    name: 'magnetBunyan',
+    streams: [
+      {
+        type: 'raw',
+        stream: new Bunyan2Loggly({
+          token: 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx',
+          subdomain: 'magnet',
+          tags: ['production', 'api']
+        })
+      }
+    ]
+  }
+}
+```
