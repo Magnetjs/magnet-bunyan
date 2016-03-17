@@ -8,7 +8,6 @@ export default class Bunyan extends Base {
     if (this.config && this.config.bunyan) {
       bunyanConfig = this.config.bunyan;
     }
-    console.log(bunyanConfig);
     const config = Object.assign(defaultConfig.bunyan, bunyanConfig);
     this.app.log = bunyan.createLogger(config);
   }
