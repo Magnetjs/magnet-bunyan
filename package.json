@@ -1,6 +1,6 @@
 {
   "name": "magnet-bunyan",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Magnet adapter for Bunyan",
   "main": "dist/index.js",
   "scripts": {
@@ -48,10 +48,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/kievechua/magnet_modules.git"
+    "url": "git+ssh://git@github.com/Magnetjs/magnet-bunyan.git"
   },
   "bugs": {
-    "url": "https://github.com/kievechua/magnet_modules/issues"
+    "url": "https://github.com/Magnetjs/magnet-bunyan/issues"
   },
-  "homepage": "https://github.com/kievechua/magnet_modules#readme"
+  "homepage": "https://github.com/Magnetjs/magnet-bunyan#readme"
 }
