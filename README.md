@@ -10,14 +10,14 @@ magnet([
   Logger,
 ]);
 ```
+
 With Adapter
 ```
 import magnet from 'magnet-core';
 import Logger from 'magnet-bunyan';
 
-magnet([
-  Logger,
-]);
+let app = await magnet([Logger]);
+app.log.info('Some useful info');
 ```
 server/config/bunyan.js
 ```
