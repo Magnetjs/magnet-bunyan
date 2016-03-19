@@ -4,11 +4,13 @@
   "description": "Magnet adapter for Bunyan",
   "main": "dist/index.js",
   "scripts": {
-    "start": "gulp watch",
-    "prepublish": "babel src --presets babel-preset-es2015,babel-preset-stage-0 --out-dir dist",
-    "build": "babel src --presets babel-preset-es2015,babel-preset-stage-0 --out-dir dist",
-    "test": "babel-node --presets es2015,stage-0 tests/index.js | tap-spec",
-    "watch-test": "nodemon --exec babel-node --presets es2015,stage-0 tests/index.js | tap-spec"
+    "prepublish": "npm run build",
+    "build": "babel src --out-dir dist",
+    "start": "babel src --out-dir dist",
+    "test": "babel-node tests/index.js | tap-spec",
+    "watch": "nodemon --ignore dist --exec \"babel src\" --out-dir dist",
+    "watch-test": "nodemon --delay 0.5 --ignore src --exec babel-node tests/index.js | tap-spec",
+    "watch-all": "concurrently \"npm run watch\" \"npm run watch-test\""
   },
   "keywords": [
     "magnet",
@@ -53,5 +55,59 @@
   "bugs": {
     "url": "https://github.com/Magnetjs/magnet-bunyan/issues"
   },
-  "homepage": "https://github.com/Magnetjs/magnet-bunyan#readme"
+  "homepage": "https://github.com/Magnetjs/magnet-bunyan#readme",
+  "babel": {
+    "presets": ["es2015", "stage-0"],
+    "plugins": ["transform-async-to-generator"]
+  },
+  "eslintConfig": {
+    "extends": "eslint-config-airbnb",
+    "env": {
+      "browser": true,
+      "node": true,
+      "mocha": true
+    },
+    "rules": {
+      "import/default": 0,
+      "import/no-duplicates": 0,
+      "import/named": 0,
+      "import/namespace": 0,
+      "import/no-unresolved": 0,
+      "import/no-named-as-default": 2,
+      "jsx-quotes": 2,
+      "block-scoped-var": 0,
+      "padded-blocks": 0,
+      "comma-dangle": 0,
+      "indent": [
+        2,
+        2,
+        {
+          "SwitchCase": 1
+        }
+      ],
+      "no-console": 0,
+      "no-alert": 0
+    },
+    "plugins": [
+      "import"
+    ],
+    "settings": {
+      "import/parser": "babel-eslint",
+      "import/resolve": {
+        "moduleDirectory": [
+          "node_modules",
+          "src"
+        ]
+      }
+    },
+    "globals": {
+      "__DEVELOPMENT__": true,
+      "__CLIENT__": true,
+      "__SERVER__": true,
+      "__DISABLE_SSR__": true,
+      "__DEVTOOLS__": true,
+      "socket": true,
+      "webpackIsomorphicTools": true
+    }
+  }
 }
