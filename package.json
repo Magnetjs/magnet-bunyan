@@ -1,6 +1,6 @@
 {
   "name": "magnet-bunyan",
-  "version": "0.1.3",
+  "version": "1.0.0",
   "description": "Magnet adapter for Bunyan",
   "keywords": [
     "bunyan",
