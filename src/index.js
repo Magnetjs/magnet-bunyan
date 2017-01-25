@@ -1,4 +1,4 @@
-import Base from 'magnet-core/dist/base';
+import Base from 'magnet-core/base';
 import bunyan from 'bunyan';
 import defaultConfig from './config/bunyan';
 
