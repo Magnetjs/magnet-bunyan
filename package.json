@@ -90,7 +90,7 @@
   },
   "dependencies": {
     "bunyan": "^1.7.1",
-    "magnet-core": "^2.0.0"
+    "magnet-core": "^3.1.0"
   },
   "devDependencies": {
     "ava": "^0.13.0",
