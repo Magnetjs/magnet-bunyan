@@ -1,5 +1,3 @@
 export default {
-  bunyan: {
-    name: 'magnet-app'
-  }
-};
+  name: 'magnet-app'
+}

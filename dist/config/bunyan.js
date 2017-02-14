@@ -4,7 +4,5 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = {
-  bunyan: {
-    name: 'magnet-app'
-  }
+  name: 'magnet-app'
 };
