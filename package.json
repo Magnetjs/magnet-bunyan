@@ -52,7 +52,7 @@
   },
   "dependencies": {
     "bunyan": "^1.7.1",
-    "magnet-core": "^3.2.2"
+    "magnet-core": "^3.3.0"
   },
   "devDependencies": {
     "ava": "^0.18.1",
