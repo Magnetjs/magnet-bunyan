@@ -7,18 +7,18 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-Object.defineProperty(exports, "__esModule", { value: true });
 const module_1 = require("magnet-core/module");
-const bunyan_1 = require("bunyan");
-const bunyan_2 = require("./config/bunyan");
+const bunyan = require("bunyan");
+const bunyan_1 = require("./config/bunyan");
 class Bunyan extends module_1.Module {
     setup() {
         return __awaiter(this, void 0, void 0, function* () {
-            const config = this.prepareConfig('bunyan', bunyan_2.default);
-            this.app.bunyan = bunyan_1.default.createLogger(config);
+            const config = this.prepareConfig('bunyan', bunyan_1.default);
+            this.app.bunyan = bunyan.createLogger(config);
             this.app.log = this.app.bunyan;
         });
     }
 }
+Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = Bunyan;
 //# sourceMappingURL=index.js.map
