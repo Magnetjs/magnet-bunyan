@@ -1,1 +1,1 @@
-{"version":3,"sources":["config/bunyan.js"],"names":[],"mappings":";;;;;kBAAe;AACb,UAAQ;AACN,UAAM,YAAN;GADF","file":"config/bunyan.js","sourcesContent":["export default {\n  bunyan: {\n    name: 'magnet-app'\n  }\n};\n"],"sourceRoot":"/source/"}
+{"version":3,"file":"bunyan.js","sourceRoot":"","sources":["../../src/config/bunyan.ts"],"names":[],"mappings":";;AAAA,kBAAe;IACb,IAAI,EAAE,YAAY;CACnB,CAAA"}
