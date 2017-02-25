@@ -22,42 +22,21 @@
   "main": "dist/index.js",
   "repository": "magnetjs/magnet-bunyan",
   "scripts": {
-    "build": "babel src --out-dir dist",
+    "build": "tsc",
     "dist": "npm run build && npm publish",
-    "start": "babel src --out-dir dist",
+    "start": "tsc",
     "test": "ava | tap-spec",
-    "watch": "nodemon --ignore dist --exec \"babel src\" --out-dir dist",
+    "watch": "tsc -w",
     "watch-all": "concurrently \"npm run watch\" \"npm run watch-test\"",
     "watch-test": "ava --watch | tap-spec"
   },
-  "babel": {
-    "ignore": [
-      "node_modules",
-      "dist",
-      "test"
-    ],
-    "plugins": [
-      "fast-async"
-    ],
-    "presets": [
-      [
-        "env",
-        {
-          "targets": {
-            "node": "current"
-          }
-        }
-      ]
-    ]
-  },
   "dependencies": {
     "bunyan": "^1.7.1",
-    "magnet-core": "^3.3.0"
+    "magnet-core": "^3.5.3"
   },
   "devDependencies": {
     "ava": "^0.18.1",
     "babel-cli": "^6.23.0",
-    "babel-preset-env": "^1.1.8",
     "concurrently": "^3.3.0",
     "fast-async": "^6.2.0",
     "nodemon": "^1.9.1",
@@ -73,11 +52,6 @@
     "source": [
       "**/*.{js,jsx}",
       "!dist/**/*"
-    ],
-    "require": [
-      "babel-core/register",
-      "babel-polyfill"
-    ],
-    "babel": "inherit"
+    ]
   }
 }
