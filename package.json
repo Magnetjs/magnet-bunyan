@@ -36,7 +36,7 @@
   },
   "devDependencies": {
     "ava": "^0.18.1",
-    "concurrently": "^3.3.0",
+    "concurrently": "^3.4.0",
     "fast-async": "^6.2.0",
     "nodemon": "^1.9.1",
     "standard": "^8.6.0",
