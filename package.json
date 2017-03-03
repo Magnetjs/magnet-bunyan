@@ -31,7 +31,7 @@
     "watch-test": "ava --watch | tap-spec"
   },
   "dependencies": {
-    "bunyan": "^1.7.1",
+    "bunyan": "^1.8.6",
     "magnet-core": "^3.5.3"
   },
   "devDependencies": {
