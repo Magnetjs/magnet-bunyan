@@ -1,6 +1,8 @@
 [![Build Status](https://travis-ci.org/Magnetjs/magnet-bunyan.svg?branch=master)](https://travis-ci.org/Magnetjs/magnet-bunyan)
 
 ### Usage
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/Magnetjs/magnet-bunyan.svg)](https://greenkeeper.io/)
 Basic
 ```
 import magnet from 'magnet-core';
