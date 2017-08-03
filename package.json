@@ -22,9 +22,9 @@
   "main": "dist/index.js",
   "repository": "magnetjs/magnet-bunyan",
   "scripts": {
-    "build": "tsc",
-    "dist": "npm run build && npm publish",
-    "start": "tsc",
+    "start": "fly",
+    "build": "fly build",
+    "dist": "npm run build && cd dist && npm publish",
     "test": "ava | tap-spec",
     "watch": "tsc -w",
     "watch-all": "concurrently \"npm run watch\" \"npm run watch-test\"",
@@ -36,11 +36,12 @@
   },
   "devDependencies": {
     "ava": "^0.21.0",
-    "concurrently": "^3.3.0",
-    "fast-async": "^6.2.0",
-    "nodemon": "^1.9.1",
-    "standard": "^10.0.2",
-    "tap-spec": "^4.1.1"
+    "fly": "^2.0.6",
+    "fly-clear": "^1.0.1",
+    "fly-esnext": "^2.0.1",
+    "fly-flatten": "^1.0.1",
+    "fly-typescript": "^1.1.0",
+    "fly-watch": "^1.1.1"
   },
   "engines": {
     "node": ">=6.9.5"
