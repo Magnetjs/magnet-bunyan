@@ -7,6 +7,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+Object.defineProperty(exports, "__esModule", { value: true });
 const module_1 = require("magnet-core/module");
 const bunyan = require("bunyan");
 const bunyan_1 = require("./config/bunyan");
@@ -19,6 +20,5 @@ class Bunyan extends module_1.Module {
         });
     }
 }
-Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = Bunyan;
 //# sourceMappingURL=index.js.map

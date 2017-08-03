@@ -1,6 +1,6 @@
 {
   "name": "magnet-bunyan",
-  "version": "1.2.1",
+  "version": "2.0.0",
   "description": "Magnet adapter for Bunyan",
   "keywords": [
     "bunyan",
@@ -32,14 +32,14 @@
   },
   "dependencies": {
     "bunyan": "^1.7.1",
-    "magnet-core": "^3.5.3"
+    "magnet-core": "^4.0.1"
   },
   "devDependencies": {
-    "ava": "^0.18.1",
+    "ava": "^0.21.0",
     "concurrently": "^3.3.0",
     "fast-async": "^6.2.0",
     "nodemon": "^1.9.1",
-    "standard": "^8.6.0",
+    "standard": "^10.0.2",
     "tap-spec": "^4.1.1"
   },
   "engines": {
