@@ -28,11 +28,14 @@
     "test": "ava | tap-spec",
     "watch": "tsc -w",
     "watch-all": "concurrently \"npm run watch\" \"npm run watch-test\"",
-    "watch-test": "ava --watch | tap-spec"
+    "watch-test": "ava --watch | tap-spec",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "bunyan": "^1.7.1",
-    "magnet-core": "^4.0.1"
+    "magnet-core": "^4.0.1",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "ava": "^0.21.0",
@@ -53,5 +56,6 @@
       "**/*.{js,jsx}",
       "!dist/**/*"
     ]
-  }
+  },
+  "snyk": true
 }
